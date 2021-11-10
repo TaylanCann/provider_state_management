@@ -9,8 +9,30 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final ValueNotifier<int> _counter = ValueNotifier<int>(0);
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: _appBar(),
+      body: _body(),
+    );
+  }
+
+  _appBar() {
+    return AppBar(
+      title: Text("Provider"),
+    );
+  }
+
+  _body() {
+    return Column(
+      children: [
+        Text("data"),
+        ValueListenableBuilder(
+            valueListenable: valueListenable,
+            builder: (BuildContext context) {})
+      ],
+    );
   }
 }
