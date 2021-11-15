@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'Screens/MainScreen.dart';
+import 'package:provider_state_management/view/MainScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: MainScreen(title: "s"),
+      home: ShoppiTabView(),
     );
   }
 }
